@@ -107,3 +107,24 @@ small{font-size:15px}
 @media(max-width:580px){.quote-section{padding:30px 15px 35px;gap:24px}.actions .section-title:after{top:max(46px,calc(var(--kiwi-top) + var(--kiwi-size)*.39))}.news-heading:after{top:max(88px,calc(var(--news-kiwi-top) + var(--news-kiwi-size)*.8))}.news-title-group{min-height:100px}}
 .news-kiwi{margin-bottom:var(--news-kiwi-top)}
 .actions-kiwi{margin-bottom:var(--kiwi-top)}
+
+/* A soft, rounded donation banner in the brochure palette. */
+.donation-paper{display:block;min-height:410px;background:var(--cream);color:var(--brown);border-radius:32px;overflow:hidden;box-shadow:0 12px 32px #6a433912}
+.donation-paper:before{content:none}
+.donation-copy{position:relative;z-index:2;width:60%;padding:48px 46px 38px;background:transparent}
+.donation h2{font-size:clamp(30px,3vw,42px);line-height:1.25;max-width:580px}
+.donation h2 .ribbon{white-space:nowrap}
+.donation-copy p{max-width:500px;margin-top:22px;margin-bottom:25px;color:var(--brown)}
+.donation-copy .button{width:min(100%,475px);border-radius:999px;text-transform:uppercase;box-shadow:0 6px 18px #f9ad2633;padding:16px 22px}
+.donation-copy .button:hover{box-shadow:0 9px 22px #f9ad264d}
+.donation-copy small{width:min(100%,475px);color:var(--brown);text-align:center;margin-top:15px}
+.donation-photo{position:absolute;inset:0 0 0 auto;width:55%;height:100%;background:var(--cream);display:block;overflow:hidden}
+.donation-photo>img{width:100%;height:100%;max-height:none;object-fit:cover;object-position:65% center;clip-path:none}
+.donation-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--cream),#fffaf3b3 12%,#fffaf300 40%);pointer-events:none}
+.donation-heart{z-index:1;pointer-events:none}
+.donation-heart-coral{color:var(--coral);top:26px;right:25px;width:62px;height:62px;transform:rotate(12deg)}
+.donation-heart-blue{color:var(--blue);top:46px;left:16%;right:auto;width:40px;height:40px;transform:rotate(-16deg)}
+.donation-heart-yellow{color:var(--yellow);top:auto;bottom:40px;left:24%;right:auto;width:30px;height:30px;transform:rotate(16deg)}
+@media(max-width:1000px){.donation-paper{min-height:390px}.donation-copy{width:63%;padding:36px 30px}.donation h2{font-size:34px}.donation-photo{width:53%}.donation-copy .button{padding:15px 18px}}
+@media(max-width:700px){.donation-paper{border-radius:26px}.donation-copy{width:100%;padding:30px 25px 18px}.donation h2{font-size:32px}.donation-copy p{max-width:none}.donation-copy .button,.donation-copy small{width:100%}.donation-photo{position:relative;inset:auto;width:100%;height:300px}.donation-photo>img{object-position:65% 45%}.donation-photo:after{background:linear-gradient(180deg,var(--cream),#fffaf300 30%)}.donation-heart-coral{top:38px;right:22px;width:48px;height:48px}.donation-heart-blue{top:55px;left:9%}.donation-heart-yellow{bottom:25px;left:16%}}
+@media(max-width:360px){.donation-copy{padding-inline:20px}.donation h2{font-size:29px}.donation-copy .button{padding:14px 12px;gap:8px}}
